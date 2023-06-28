@@ -1,8 +1,11 @@
 package com.example.tacocloud.tacos;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
 public class TacoOrder {
     private String deliveryName;
     private String deliveryStreet;
@@ -11,7 +14,7 @@ public class TacoOrder {
     private String deliveryZip;
     private String ccNumber;
     private String ccExpiration;
-    private String ccCW;
+    private String ccCVV;
 
     private List<Taco> tacos = new ArrayList<>();
 
