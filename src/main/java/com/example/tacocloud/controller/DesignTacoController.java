@@ -34,9 +34,9 @@ public class DesignTacoController {
 
     @ModelAttribute
     public void addIngredientsToModel(Model model) {
-        Iterable<Ingredient> ingredientsFromJdbc = ingredientRepo.findAll();
         List<Ingredient> ingredients = new ArrayList<>();
-        ingredientsFromJdbc.forEach(ingredients::add);
+        ingredientRepo.findAll().forEach(i -> ingredients.add(i));
+
         Type[] types = Ingredient.Type.values();
         for (Type type : types) {
             model.addAttribute(type.toString().toLowerCase(),

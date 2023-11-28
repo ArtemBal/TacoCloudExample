@@ -14,14 +14,15 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-@Table("Taco_Cloud_Order") // name of created table for orders
+@Table
+//@Table("Taco_Cloud_Order") - save in table Taco_Cloud_Order
 public class TacoOrder {
     private static final long serialVersionUID = 1L;
     @Id
     private Long id;
-    private Date placedAt;
+    private Date placedAt = new Date();
 
-    @Column("customer_name") // name of column in table
+    //@Column("customer_name") save name in column customer_name in table
     @NotBlank(message = "Delivery name is required")
     private String deliveryName;
 
