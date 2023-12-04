@@ -1,4 +1,8 @@
 spring:
-  datasource:
-    generate-unique-name: false
-    name: tacocloud
+  # data: -deprecated
+    cassandra:
+      keyspace-name: taco_cloud
+      schema-action: recreate
+      local-datacenter: datacenter1
+      username: tacocloud
+      password: s3cr3tP455w0rd
