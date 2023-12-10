@@ -1,8 +1,8 @@
 package com.example.tacocloud.tacos;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.*;
-import org.springframework.data.annotation.Id;
 
 @Data
 @Entity
