@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-@EnableAutoConfiguration // TODO: In Cassandra version write converters
+@EnableAutoConfiguration
 public class TacoCloudApplication {
 
     public static void main(String[] args) {
