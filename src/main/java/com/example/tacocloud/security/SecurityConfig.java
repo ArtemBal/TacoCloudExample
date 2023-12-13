@@ -38,7 +38,11 @@ public class SecurityConfig {
                 )
                 .formLogin(form -> form
                         .loginPage("/login")
+                        .loginProcessingUrl("/authenticate")
+                        .usernameParameter("user")
+                        .passwordParameter("pwd")
                         .permitAll()
+                        .defaultSuccessUrl("/design")
                 ).build();
     }
 }
